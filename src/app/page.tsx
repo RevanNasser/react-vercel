@@ -5,18 +5,17 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        
-        <ul className="list-disc pl-6 text-left">
-          <li className="mb-2 tracking-[-.01em]">Welcome to my portfolio.</li>
-        </ul>
+      <div className="text-center sm:text-left">
+    <h1 className="text-4xl sm:text-5xl font-bold mb-2">
+       Hi there! 👋
+    </h1>
+    <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300">
+      Welcome to Rifan's portfolio — I’m glad you’re here 
+    </p>
+  </div>
+       
+  
+     
 
         <section className="w-full">
           <h2 className="text-2xl font-semibold mb-4">My Projects</h2>
