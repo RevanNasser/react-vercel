@@ -9,7 +9,7 @@ export default function Home() {
        Hi there! 👋
     </h1>
     <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300">
-      Welcome to Rifan's portfolio — I’m glad you’re here 
+    Welcome to my portfolio — I&apos;m glad you&apos;re here!
     </p>
   </div>
         <section className="w-full">
