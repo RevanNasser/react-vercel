@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { Youtube, Linkedin, Github } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -12,90 +13,78 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        
+        <ul className="list-disc pl-6 text-left">
+          <li className="mb-2 tracking-[-.01em]">Welcome to my portfolio.</li>
+        </ul>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <section className="w-full">
+          <h2 className="text-2xl font-semibold mb-4">My Projects</h2>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <a
+              href="https://github.com/RevanNasser/trpc-react-native.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+            >
+              <h3 className="font-semibold text-lg mb-1">tRPC in React Native</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 p-6">
+                Simple RN App that demonstrates how to use tRPC for efficient server communication in a React Native app. 
+                The app includes features like fetching a custom greeting based on user input and displaying a user list from a mock tRPC server in a dynamic table.
+              </p>
+              <img
+                src="https://raw.githubusercontent.com/RevanNasser/trpc-react-native/main/tRPC-react-native-DEMO.gif"
+                className="rounded-lg shadow-md w-full max-w-xl"
+              />
+            </a>
+            <a
+              href="https://github.com/RevanNasser/Minecraft-Items-Explorer.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+            >
+              <h3 className="font-semibold text-lg mb-1">Minecraft Items Explorer</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 p-6">
+                Minecraft Items Explorer is a React Native app that allows users to explore and search for Minecraft items.
+              </p>
+              <img
+                src="https://raw.githubusercontent.com/RevanNasser/Minecraft-Items-Explorer/main/minecraft-items-explorer.gif"
+                className="rounded-lg shadow-md w-full max-w-xl"
+              />
+            </a>
+          </div>
+        </section>
       </main>
+
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/RevanNasser"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          <Github />
+          GitHub
         </a>
+
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://linkedin.com/in/rifan-alshahrani"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <Linkedin />
+          LinkedIn
         </a>
+
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://www.youtube.com/@RevanAcademy"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          <Youtube />
+          YouTube
         </a>
       </footer>
     </div>
