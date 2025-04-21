@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Youtube, Linkedin, Github } from 'lucide-react';
 
 export default function Home() {
@@ -13,10 +12,6 @@ export default function Home() {
       Welcome to Rifan's portfolio — I’m glad you’re here 
     </p>
   </div>
-       
-  
-     
-
         <section className="w-full">
           <h2 className="text-2xl font-semibold mb-4">My Projects</h2>
           <div className="grid gap-6 sm:grid-cols-2">
