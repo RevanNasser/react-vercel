@@ -1,30 +1,32 @@
 
 import { Youtube, Linkedin, Github } from 'lucide-react';
 import * as motion from "motion/react-client"
-// import i18n from 'i18next';
-// import { useTranslation } from "next-i18next";
+import Image from 'next/image';
 
 export default function Home() {
-  // const { t } = useTranslation();
 
-  // const changeLanguage = (lang: string) => {
-  //   i18n.changeLanguage(lang);
-  // };
-  
   return (
-    <><motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-    
-      <h2 className="text-3xl font-bold text-accent">Animated Header</h2>
-    </motion.div><motion.div
-      className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
+    <>
+    <motion.div
+      className="grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-sans"
     initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, ease: "backInOut" }}
     >
+      <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+ <Image
+  src="/assets/logo.png"
+  width={80}
+  height={80}
+  alt="Logo"
+  className="rounded-full shadow-md"
+/>
+
+    </motion.div>
         <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
           <div className="text-center sm:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold mb-2">
@@ -35,7 +37,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               className="text-[40px] font-bold capitalize"
             >
-              {/* Welcome to my portfolio — I&apos;m glad you&apos;re here! */}
+              Welcome to my portfolio — I&apos;m glad you&apos;re here!
             </motion.p>
           </div>
           <section className="w-full">

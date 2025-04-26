@@ -1,28 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f0f4f8;
-  --foreground: #0a2540;
+  --background: #0A0F1F; 
+  --foreground: #D9E4F5;
 
-  --accent: #3b82f6; 
-  --accent-light: #93c5fd;
-  --accent-dark: #1e40af; 
+  --accent: #5EA9FF;
+  --accent-light: #A7D3FF;
+  --accent-dark: #2563EB;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ffffff;
-    --accent: #60a5fa;
-    --accent-light: #93c5fd;
-    --accent-dark: #1e3a8a;
+    --background: #05070D; 
+    --foreground: #C7D7EE;
+
+    --accent: #3B82F6;
+    --accent-light: #7AB5FF;
+    --accent-dark: #1E40AF;
   }
 }
 
-body {
+html {
+  height: 100%;
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
+/* Twinkling Stars */
+body::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(61,158,226,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at top left, rgba(109,185,255,0.1) 0%, transparent 70%),
+              radial-gradient(ellipse at bottom right, rgba(109,185,255,0.05) 0%, transparent 80%);
+  pointer-events: none;
+  z-index: -1;
+}
+/* Hover Glow Effect for Links/Buttons */
+a, button {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a::after, button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(2);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.7s;
+}
+
+a:hover::after, button:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(94,169,255,0.2) 0%, transparent 60%),
+              radial-gradient(ellipse at top left, rgba(167,211,255,0.15) 0%, transparent 70%),
+              radial-gradient(ellipse at bottom right, rgba(167,211,255,0.1) 0%, transparent 80%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 a,
@@ -33,4 +87,25 @@ button {
 a:hover,
 button:hover {
   color: var(--accent-dark);
+}
+.meteor {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 10px;
+  height: 30px;
+  background: linear-gradient(45deg, #F1A7FF, #57C4FF);
+  border-radius: 50%;
+  animation: meteor-animation 2s linear infinite;
+}
+
+@keyframes meteor-animation {
+  0% {
+    top: -50px;
+    left: 50%;
+  }
+  100% {
+    top: 100vh;
+    left: 80%;
+  }
 }
