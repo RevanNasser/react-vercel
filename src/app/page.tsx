@@ -2,10 +2,10 @@
 import { Youtube, Linkedin, Github } from 'lucide-react';
 import * as motion from "motion/react-client"
 import i18n from 'i18next';
-import { useTranslation } from "next-i18next";
+// import { useTranslation } from "next-i18next";
 
 export default function Home() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -28,7 +28,6 @@ export default function Home() {
         <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start w-full max-w-4xl">
           <div className="text-center sm:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold mb-2">
-              {t("WelcomeMessage")}
               Hi there! 👋
             </h1>
             <motion.p
