@@ -1,7 +1,7 @@
 
 import { Youtube, Linkedin, Github } from 'lucide-react';
 import * as motion from "motion/react-client"
-import i18n from 'i18next';
+// import i18n from 'i18next';
 // import { useTranslation } from "next-i18next";
 
 export default function Home() {
