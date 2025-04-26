@@ -7,9 +7,9 @@ import i18n from 'i18next';
 export default function Home() {
   // const { t } = useTranslation();
 
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+  // const changeLanguage = (lang: string) => {
+  //   i18n.changeLanguage(lang);
+  // };
   
   return (
     <><motion.div
